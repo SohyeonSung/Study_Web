@@ -9,11 +9,9 @@
 
     // 2. 계산처리(총점, 평균)
     int total = kor + eng + math;
-    double avg = total / 3.0;
-    
-    
-	// 3. 결과 출력(브라우저 화면 - html 태그 작성)
+    double avg = total / 3.0;  
 %>
+	<!-- 3. 결과 출력(브라우저 화면 - HTML 태그 작성) -->
 <!DOCTYPE html>
 <html>
 <head>
