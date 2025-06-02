@@ -31,7 +31,7 @@ public class EmployeeDAO {
 			pstmt.setInt(1, sabun);
 			rs = pstmt.executeQuery();
 			
-			while (rs.next()) {
+			if (rs.next()) {
 				vo = new EmployeeVO(
 						rs.getInt("SABUN"),
 						rs.getString("NAME"),
@@ -51,16 +51,55 @@ public class EmployeeDAO {
 	}
 	
 	public int update(EmployeeVO vo) {
-		return 0;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = JdbcUtil.getConnection();
+			
+			StringBuilder sql = new StringBuilder();
+			sql.append("UPDATE EMPLOYEE ");
+			sql.append("   SET NAME = ? "); // 1
+			sql.append("     , PAY = ? ");  // 2
+			sql.append("     , REGDATE = SYSDATE ");
+			sql.append("WHERE SABUN = ? "); // 3
+			pstmt = conn.prepareStatement(sql.toString());
+			
+			pstmt.setString(1, vo.getName());
+			pstmt.setInt(2, vo.getPay());
+			pstmt.setInt(3, vo.getSabun());
+			
+			return pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	public int delete(int sabun) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		int result = 0;
+		try {
+			conn = JdbcUtil.getConnection();
+			
+			String sql = "DELETE FROM EMPLOYEE WHERE SABUN = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, sabun);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			result = -1;
+		}
+		
+		return result;
 	}
 	
 	public int delete(EmployeeVO vo) {
 		return 0;
 	}
-	
-	public int delete(int sabun) {
-		return 0;
-	}
-	
 	
 }

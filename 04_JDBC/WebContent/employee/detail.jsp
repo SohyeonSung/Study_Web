@@ -31,7 +31,7 @@
 		//   - SELECT : 조회(검색) 데이터 결과 값에 대한 처리
 		rs = pstmt.executeQuery();
 		
-		while (rs.next()) {
+		if (rs.next()) {
 			vo = new EmployeeVO(
 					rs.getInt("SABUN"),
 					rs.getString("NAME"),
@@ -82,6 +82,7 @@
 	</p>
 </body>
 </html>
+
 
 
 
