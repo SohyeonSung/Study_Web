@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="01_Servlet" path="/01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet"/><Context docBase="02_JSP" path="/02_JSP" reloadable="true" source="org.eclipse.jst.jee.server:02_JSP"/><Context docBase="03_scope" path="/03_scope" reloadable="true" source="org.eclipse.jst.jee.server:03_scope"/><Context docBase="04_JDBC" path="/04_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:04_JDBC"/><Context docBase="05_include" path="/05_include" reloadable="true" source="org.eclipse.jst.jee.server:05_include"/></Host>
+      <Context docBase="01_Servlet" path="/01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet"/><Context docBase="02_JSP" path="/02_JSP" reloadable="true" source="org.eclipse.jst.jee.server:02_JSP"/><Context docBase="03_scope" path="/03_scope" reloadable="true" source="org.eclipse.jst.jee.server:03_scope"/><Context docBase="04_JDBC" path="/04_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:04_JDBC"/><Context docBase="05_include" path="/05_include" reloadable="true" source="org.eclipse.jst.jee.server:05_include"/><Context docBase="06_actiontag" path="/06_actiontag" reloadable="true" source="org.eclipse.jst.jee.server:06_actiontag"/></Host>
     </Engine>
   </Service>
 </Server>
