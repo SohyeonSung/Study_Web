@@ -15,5 +15,12 @@
 		FROM GUESTBOOK
 		ORDER BY IDX DESC
 	</select>
+	
+	<insert id = "insert" parameterType="com.mystudy.mybatis.GuestbookVO">
+		INSERT INTO GUESTBOOK
+	          (IDX, NAME, SUBJECT, CONTENT, EMAIL, PWD, REGDATE)
+		VALUES (GUESTBOOK_SEQ.NEXTVAL, #{name}, #{subject}, #{content}, #{email}, #{pwd}, SYSDATE)
+
+	</insert>
 
 </mapper>

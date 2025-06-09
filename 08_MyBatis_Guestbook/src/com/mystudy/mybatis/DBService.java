@@ -15,13 +15,12 @@ public class DBService {
 	// static 초기화 구문
 	static {
 		try {
-			
 			/*
+			 * 
 			SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
 			Reader reader = Resources.getResourceAsReader("com/mystudy/mybatis/config.xml");
 			factory = factoryBuilder.build(reader);
 			*/
-			
 			factory = new SqlSessionFactoryBuilder()
 					.build(Resources.getResourceAsReader("com/mystudy/mybatis/config.xml"));
 		} catch (IOException e) {
@@ -34,6 +33,24 @@ public class DBService {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

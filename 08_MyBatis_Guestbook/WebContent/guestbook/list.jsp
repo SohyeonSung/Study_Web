@@ -4,7 +4,7 @@
 <%@page import="com.mystudy.mybatis.DBService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>     
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%-- DB에서 전체 데이터 조회(SELECT) 후 화면 출력 --%>
 <%
 	//DB에서 전체 데이터 조회(SELECT) 후 화면 출력
@@ -31,6 +31,18 @@
 <head>
 <meta charset="UTF-8">
 <title>전체목록</title>
+<style>
+	#container { width: 600px; margin: auto; }
+	#container h2 { text-align: center;}
+	#container p { text-align: center;}
+	#container table { 
+		width: 100%; 
+		border-collapse: collapse;
+	}
+	#container th { background-color: orange; }
+	#container th, #container td { border: 1px solid black; }
+	.center { text-align: center;}
+</style>
 </head>
 <body>
 \${pageScope.list } : ${pageScope.list }
@@ -59,25 +71,29 @@
 			--%>
 		<c:forEach var="vo" items="${list }">
 			<tr>
-				<td>${vo.idx }</td>
+				<td class="center">${vo.idx }</td>
 				<td>${vo.subject }</td>
-				<td>${vo.name }</td>
-				<td>${vo.regdate }</td>
+				<td class="center">${vo.name }</td>
+				<td class="center">${vo.regdate }</td>
 			</tr>
 		</c:forEach>
 		<c:if test="${empty list }">
 			<tr>
-				<td colspan = "4"> 검색된 데이터가 없습니다 </td>
+				<td colspan="4">검색된 데이터가 없습니다</td>
 			</tr>
-		</c:if>
+		</c:if>	
 		</tbody>
 	</table>
-
 </div>
 
 
 </body>
 </html>
+
+
+
+
+
 
 
 
