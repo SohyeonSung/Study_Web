@@ -16,7 +16,6 @@ public class DBService {
 	static {
 		try {
 			/*
-			 * 
 			SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
 			Reader reader = Resources.getResourceAsReader("com/mystudy/mybatis/config.xml");
 			factory = factoryBuilder.build(reader);
@@ -27,6 +26,7 @@ public class DBService {
 			e.printStackTrace();
 		}
 	}
+
 	
 	public static SqlSessionFactory getFactory() {
 		return factory;

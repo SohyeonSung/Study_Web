@@ -31,27 +31,21 @@
 <head>
 <meta charset="UTF-8">
 <title>전체목록</title>
-<style>
-	#container { width: 600px; margin: auto; }
-	#container h2 { text-align: center;}
-	#container p { text-align: center;}
-	#container table { 
-		width: 100%; 
-		border-collapse: collapse;
-	}
-	#container th { background-color: orange; }
-	#container th, #container td { border: 1px solid black; }
-	.center { text-align: center;}
-</style>
+	<link rel="stylesheet" href="../css/guestbook.css">
 </head>
 <body>
-\${pageScope.list } : ${pageScope.list }
+<%-- \${pageScope.list } : ${pageScope.list } --%>
 
 <div id="container">
 	<h2>방명록</h2>
 	<hr>
 	<p><a href="write.jsp">[방명록쓰기]</a></p>
 	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="50%">
+			<col width="15%">
+		</colgroup>
 		<thead>
 			<tr>
 				<th>번호</th>
@@ -72,7 +66,9 @@
 		<c:forEach var="vo" items="${list }">
 			<tr>
 				<td class="center">${vo.idx }</td>
-				<td>${vo.subject }</td>
+				<td>
+					<a href="onelist.jsp?idx=${vo.idx }">${vo.subject }</a>
+				</td>
 				<td class="center">${vo.name }</td>
 				<td class="center">${vo.regdate }</td>
 			</tr>
@@ -89,6 +85,16 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 

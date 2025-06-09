@@ -11,7 +11,6 @@ public class GuestbookVO {
 	private String pwd;
 	private Date regdate;
 	
-	
 	public int getIdx() {
 		return idx;
 	}
@@ -54,13 +53,11 @@ public class GuestbookVO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	
 	@Override
 	public String toString() {
 		return "GuestbookVO [idx=" + idx + ", name=" + name + ", subject=" + subject + ", content=" + content
 				+ ", email=" + email + ", pwd=" + pwd + ", regdate=" + regdate + "]";
 	}
-
-	
 	
 }
+

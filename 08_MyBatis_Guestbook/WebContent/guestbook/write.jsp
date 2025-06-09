@@ -5,20 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>입력화면</title>
-<style>
-	#container { width: 600px; margin: auto; }
-	#container h2 { text-align: center;}
-	#container p { text-align: center;}
-	#container table { 
-		width: 100%; 
-		border-collapse: collapse;
-	}
-	#container th { background-color: orange; }
-	#container th, #container td { border: 1px solid black; }
-	.center { text-align: center;}
-	#container tfoot { text-align: center;}
-	
-</style>
+	<link rel="stylesheet" href="../css/guestbook.css">
 </head>
 <body>
 
@@ -27,7 +14,7 @@
 	<hr>
 	<p><a href="list.jsp">[목록으로 이동]</a></p>
 	
-	<form action="write_ok.jsp" method = "post">
+	<form action="write_ok.jsp" method="post">
 		<table>
 			<tbody>
 				<tr>
@@ -66,3 +53,4 @@
 
 </body>
 </html>
+
