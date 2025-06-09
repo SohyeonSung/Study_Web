@@ -66,6 +66,7 @@
 					<td colspan="2">
 						<input type="button" value="수 정" onclick="save_go(this.form)">
 						<input type="reset" value="취 소">
+						<input type="text" name="idx" value="${guestbookVO.idx }">
 					</td>
 				</tr>
 			</tfoot>
