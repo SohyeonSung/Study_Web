@@ -29,6 +29,18 @@
 		       #{pwd}, SYSDATE)
 	</insert>
 	
+	<!-- VO 데이터 전달받아 이름, 제목, 이메일, 내용, 날짜 수정처리 -->
+	<update id="update">
+	UPDATE GUESTBOOK
+	SET NAME = #{name},
+    	SUBJECT = #{subject},
+    	CONTENT = #{content},
+    	EMAIL = #{email},
+    	REGDATE = SYSDATE
+	WHERE IDX = #{idx}
+	</update>
+
+	
 
 </mapper>
 
