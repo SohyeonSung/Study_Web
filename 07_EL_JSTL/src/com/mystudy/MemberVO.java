@@ -7,6 +7,19 @@ public class MemberVO {
 	private String gender;
 	private String[] hobby;
 	
+	public MemberVO() {}
+	public MemberVO(String id, String pwd, String name, String email, 
+			String gender, String[] hobby) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.email = email;
+		this.gender = gender;
+		this.hobby = hobby;
+	}
+
+
 	public String getId() {
 		return id;
 	}
@@ -51,3 +64,4 @@ public class MemberVO {
 	}
 	
 }
+

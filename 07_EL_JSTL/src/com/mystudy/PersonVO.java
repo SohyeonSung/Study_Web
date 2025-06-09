@@ -2,14 +2,14 @@ package com.mystudy;
 
 public class PersonVO {
 	private String name;
-	private String age;
+	private int age;
 	
 	// 액션태그 useBean 사용시에는 기본 생성자 작성 필수
 	public PersonVO() {
 		System.out.println(":: PersonVO() 실행-------");
 	}
 
-	public PersonVO(String name, String age) {
+	public PersonVO(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -21,10 +21,10 @@ public class PersonVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	
@@ -35,3 +35,4 @@ public class PersonVO {
 	
 	
 }
+

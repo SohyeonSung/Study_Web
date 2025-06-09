@@ -46,7 +46,8 @@
       부호 : >,  <,  >=, <=, ==, !=
       영문 : gt, lt, ge, le, eq, ne
   - 논리연산자(결과 true, false)
-      && 또는 and, || 또는 or, ! 또는 not
+      부호 : &&, ||, !
+      영문 : and, or, not
   - empty 연산자(결과 true, false)
       true 인 경우 : null, 빈문자열(""), 길이가 0인 배열, size가 0인 컬렉션, Map 확인
   - 삼항연산자
@@ -63,10 +64,17 @@ JSTL(JSP Standard Tag Labrary)
   0. 라이브러리 구하기(인터넷)
      다운로드 : https://tomcat.apache.org/download-taglibs.cgi
      다운로드 : https://mvnrepository.com/ > jstl 검색
+     https://mvnrepository.com/artifact/javax.servlet/jstl/1.2
   1. 라이브러리 등록
      WebContent > WEB-INF > lib > jar 파일 등록
   2. JSTL 디렉티브(지시어) taglib 추가
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
+
+
+
+
+
 
 
 		
