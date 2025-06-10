@@ -75,6 +75,7 @@
 					<input type="button" value="수 정" onclick="update_go()">
 					<input type="button" value="삭 제" onclick="delete_go()">
 					
+					
 				</td>
 			</tr>
 		</tfoot>
