@@ -7,7 +7,7 @@
 	입력실패(예외) : 메시지 표시 후 이전화면(입력화면) 이동 
 --%>
 <%
-	//0. 한글처리
+//0. 한글처리
 	request.setCharacterEncoding("UTF-8");
 
 	//1. 파라미터 값 추출해서 GuestbookVO 에 저장
