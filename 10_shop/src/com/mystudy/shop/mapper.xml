@@ -12,19 +12,36 @@
 	
 	
 	<!-- 전체 목록 -->
-	<select id="list" 
-			parameterType="string"
+	<select id="list" parameterType="string"
 			resultType="com.mystudy.shop.ProductVO">
-			
 		SELECT NUM, CATEGORY, PNUM, NAME, COMPANY
-				, PRICE, SALEPRICE, IMAGE_SMALL, IMAGE_LARGE, CONTENT
-				, REGDATE
+		     , PRICE, SALEPRICE, IMAGE_SMALL, IMAGE_LARGE, CONTENT
+		     , REGDATE
 		FROM PRODUCT
-		WHERE CATEGORY =  #{category}
+		WHERE CATEGORY = #{category}
 	</select>
 	
-</mapper>
+	<!-- 타입 별칭 PVO 사용 -->
+	<select id="one" parameterType="string" resultType="PVO">
+		SELECT NUM, CATEGORY, PNUM, NAME, COMPANY
+		     , PRICE, SALEPRICE, IMAGE_SMALL, IMAGE_LARGE, CONTENT
+		     , REGDATE
+		FROM PRODUCT
+		WHERE PNUM = #{pnum}
+	</select>
 
+	<!-- <select id="list_alias" parameterType="string"
+			resultType="com.mystudy.shop.ProductVO">
+		SELECT NUM, CATEGORY, PNUM, NAME, COMPANY
+		     , PRICE, SALEPRICE
+		     , IMAGE_SMALL AS IMAGESMALL, IMAGE_LARGE AS IMAGELARGE
+		     , CONTENT, REGDATE
+		FROM PRODUCT
+		WHERE CATEGORY = #{category}
+	</select> -->
+
+
+</mapper>
 
 
 

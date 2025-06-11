@@ -19,4 +19,19 @@ public class ProductDAO {
 		return null;
 	}
 
+	// 제품번호로 데이터 조회
+	public ProductVO selectOne(String pnum) {
+		SqlSession ss = null;
+		try {
+			ss = DBService.getFactory().openSession();
+			return ss.selectOne("shop.one", pnum);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (ss != null)
+				ss.close();
+		}
+		return null;
+	}
+
 }

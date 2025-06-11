@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+table {
+	width: 900px;
+	margin: 30px auto;
+	border: 1px solid navy;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid navy;
+	padding: 4px;
+}
+
+th {
+	background-color: orange;
+}
+.title {
+	width: 20%;
+}
+
+.red {
+	color: red;
+}
+
+.center {
+	text-align: center;
+}

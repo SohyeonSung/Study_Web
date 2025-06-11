@@ -27,10 +27,6 @@ hr {
 }
 
 #nav a:hover {
-	text-decoration: underline;
-	color: red;
-}
-
-#nav a:hover {
 	text-decoration: none;
+	color: red;
 }
