@@ -58,8 +58,31 @@
 				<th>제품상세설명</th>
 				<td>${pvo.content }</td>
 			</tr>
+			<tr>
+				<td colspan="2">
+					<img src="images/${pvo.imageLarge }" alt="제품이미지">
+				</td>
+			</tr>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="장바구니 담기" onclick="add()">
+					<input type="button" value="장바구니 보기" onclick="cart_go()">
+				</td>
+		
+		</tfoot>
 	</table>
+	
+<script>
+	function add() {
+		location.href = "addProduct.jsp?pnum=${pvo.pnum}";
+	}
+	function cart_go() {
+		location.href = "cartList.jsp";
+	}
+	
+</script>	
 
 
 </body>
