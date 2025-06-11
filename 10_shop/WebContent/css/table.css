@@ -15,8 +15,16 @@ th, td {
 th {
 	background-color: orange;
 }
+
+tfoot {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	height: 3em;
+}
+
 .title {
-	width: 20%;
+	width: 30%;
 }
 
 .red {

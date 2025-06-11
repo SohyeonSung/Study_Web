@@ -3,7 +3,7 @@ package com.mystudy.shop;
 import java.sql.Date;
 
 public class ProductVO {
-	
+
 	// DB에 있는 데이터 저장
 	private int num;
 	private String category;
@@ -18,14 +18,14 @@ public class ProductVO {
 	private Date regdate;
 
 	// 수량, 수량별 합계 금액(판매가*수량)
-	private int count; //장바구니에 담긴 수량
-	private int totalPrice; //수량별 합계 금액 (판매가*수량)
-	
+	private int count; // 장바구니에 담긴 수량
+	private int totalPrice; // 수량별 합계 금액 (판매가*수량)
+
 	// 할인율 조회 메소드
 	public int getPercent() {
 		return (price - saleprice) * 100 / price;
 	}
-	
+
 	public int getCount() {
 		return count;
 	}
@@ -33,19 +33,18 @@ public class ProductVO {
 	public void setCount(int count) {
 		this.count = count;
 		// 수량이 변경되면 수량별 금액 (totalPrice) 계산 후 변경처리
-		totalPrice = saleprice * count;
+		// totalPrice = saleprice * count;
 
 	}
 
 	public int getTotalPrice() {
-		return totalPrice;
+		return saleprice * count;
 	}
 
 	public void setTotalPrice(int totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 
-	
 	// getters, setters ----------------
 	public int getNum() {
 		return num;
@@ -135,6 +134,8 @@ public class ProductVO {
 		this.regdate = regdate;
 	}
 
+	
+
 	@Override
 	public String toString() {
 		return "ProductVO [num=" + num + ", category=" + category + ", pnum=" + pnum + ", name=" + name + ", company="
@@ -142,6 +143,5 @@ public class ProductVO {
 				+ ", imageLarge=" + imageLarge + ", content=" + content + ", regdate=" + regdate + ", count=" + count
 				+ ", totalPrice=" + totalPrice + "]";
 	}
-	
-	
+
 }
