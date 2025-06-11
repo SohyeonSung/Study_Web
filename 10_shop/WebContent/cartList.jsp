@@ -36,7 +36,7 @@
 				<td>${pvo.name }</td>
 				<td>정가 : ${pvo.price }원 <span class = "red"> 세일가격 : ${pvo.saleprice }원 </span></td>
 				<td>
-					<form action="editCount" method="post"> 
+					<form action="editCount.jsp" method="post"> 
 						<input type="number" name="count" value="${pvo.count }" min="1">
 						<input type="submit" value="수정">
 						<input type="hidden" name="pnum" value="${pvo.pnum }">
