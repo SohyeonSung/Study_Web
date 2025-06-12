@@ -8,6 +8,10 @@
 <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
+	<%-- 절대주소 방식으로 URL 설정 --%>
 	<%@ include file="common/menu.jspf"%>
+	
+	<%-- 상대주소 방식으로 URL 설정 --%>
+	<%-- <%@ include file="common/menu.jspf" %> --%>
 </body>
 </html>
