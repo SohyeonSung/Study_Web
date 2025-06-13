@@ -84,15 +84,7 @@
 		</form>
 	</div>
 	</c:forEach>
-	
-	<div class="comment">
-		<form action="comment_del.jsp" method="get">
-			<p>작성자 : 작성자이름 &nbsp;&nbsp; 작성일 : 2025-06-02</p>
-			<p>내용 : 작성된댓글내용</p>
-			<input type="submit" value="댓글삭제">
-			<input type="hidden" name="commentIdx" value="3">
-		</form>
-	</div>
+
 	
 </div>
 

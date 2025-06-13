@@ -1,3 +1,4 @@
+
 <%@page import="com.mystudy.bbs.common.Paging"%>
 <%@page import="com.mystudy.bbs.vo.BbsVO"%>
 <%@page import="java.util.List"%>
@@ -179,5 +180,6 @@
 
 </body>
 </html>
+
 
 

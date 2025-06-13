@@ -37,18 +37,27 @@ public class BbsDAO {
 		return null;
 	}
 	
-	//게시글 1개 조회 기능
+	//(실습)게시글 1개 조회 기능
 	
 	//게시글 입력 기능
+	public static int insert(BbsVO bvo) {
+		//openSession(true) : 오토커밋(자동커밋) 사용
+		try (SqlSession ss = DBService.getFactory().openSession(true)) {
+			return ss.insert("BBS.insert", bvo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 	
 	//게시글 수정 기능
 	
-	//게시글 조회수 1 증가 기능(수정)
+	//(실습)게시글 조회수 1 증가 기능(수정)
 	
 	//게시글 삭제 기능
 	
 	//========== 댓글관련 =========
-	//댓글목록 조회 기능(게시글에 딸린)
+	//(실습)댓글목록 조회 기능(게시글에 딸린)
 	
 	//댓글 1개 조회 기능
 	
@@ -59,3 +68,5 @@ public class BbsDAO {
 	//댓글 삭제 기능
 	
 }
+
+
