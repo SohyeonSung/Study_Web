@@ -18,5 +18,27 @@ public class EmployeeDAO {
 		}
 		return null;
 	}
+
+	//부서코드로 검색
+	public static List<EmployeeVO> getDeptList(int deptno) {
+		try (SqlSession ss = DBService.getFactory().openSession()) {
+			return ss.selectList("hr.deptList", deptno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	//이름으로 검색
+	public static List<EmployeeVO> getFullnameList(String fullname) {
+		try (SqlSession ss = DBService.getFactory().openSession()) {
+			return ss.selectList("hr.fullnameList", fullname);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	
 }
+

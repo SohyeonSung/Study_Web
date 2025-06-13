@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전체목록보기</title>
+<title>부서직원목록</title>
 </head>
 <body>
 <%-- \${list } : ${list } --%>
 \${list.size() } : ${list.size() }
 
-	<h1>전체목록 [list.jsp]</h1>
+	<h1>부서직원목록 [deptList.jsp])</h1>
 	<p>사번, 이름, 직종, 급여, 부서코드</p>
 	<ul>
 	<c:forEach var="vo" items="${list }">
@@ -23,5 +23,8 @@
 	
 </body>
 </html>
+
+
+
 
 

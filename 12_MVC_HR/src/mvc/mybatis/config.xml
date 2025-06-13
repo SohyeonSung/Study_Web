@@ -9,6 +9,10 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	
+	<typeAliases>
+		<typeAlias type="mvc.model.vo.EmployeeVO" alias="employeeVO"/>
+	</typeAliases>
+	
 
 
 	<environments default="development">

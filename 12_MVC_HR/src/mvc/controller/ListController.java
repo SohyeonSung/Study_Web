@@ -34,6 +34,7 @@ public class ListController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("> ListController doPost() 실행~~");
 		doGet(request, response);
 	}
 
