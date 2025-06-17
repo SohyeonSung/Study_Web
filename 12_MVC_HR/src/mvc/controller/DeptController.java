@@ -17,7 +17,13 @@ public class DeptController extends HttpServlet {
 		System.out.println("> DeptController doGet() 실행~");
 		// dept.jsp 페이지로 응답처리(페이지 이동)
 		request.getRequestDispatcher("dept.jsp").forward(request, response);
+		
 	}
 	
 }
+
+
+
+
+
 

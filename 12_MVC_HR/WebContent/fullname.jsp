@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>이름(성,이름) 검색화면[ fullname.jsp ]</h1>
-	<form action="fullnameList" method="post">
+	<form action="fullnameList" method="get">
 		이름(성,이름) : <input type="text" name="fullname">
 		<input type="submit" value="이름으로 검색">
 	</form>
